@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* CSS Document */
+
+.table
+{
+	
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#09F
+}
+
+.historyStore{
+	width:350px;
+}
+
+.horizontalLine{
+	color:#AAA;
+	background-color:#AAA;
+	height:1px;
+	border:2px;;
+	
+}
+
+input[type="button"]
+{
+	font-family:Arial, Helvetica, sans-serif;
+	border:1px solid #263953;
+	margin:1px;
+	padding:8px;
+	float: left;
+	text-decoration: none;
+	cursor: pointer;
+	color:#FFF;
+	
+	-moz-box-shadow:0px 1px 1px #AAA;
+	-webkit-box-shadow:0px 1px 1px #AAA;
+	box-shadow:0px 1px 1px #AAA;
+	
+	background: #b2c6de; /* Old browsers */
+	background: -moz-linear-gradient(top,  #b2c6de 0%, #4e7fb6 6%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b2c6de), color-stop(6%,#4e7fb6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #b2c6de 0%,#4e7fb6 6%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #b2c6de 0%,#4e7fb6 6%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #b2c6de 0%,#4e7fb6 6%); /* IE10+ */
+	background: linear-gradient(top,  #b2c6de 0%,#4e7fb6 6%); /* W3C */
+	background-color:'#4e7fb6';
+}
+
+.buttonClass
+{
+	width: 40px;
+	height: 35px;
+	font-size:15px;
+	font-weight:bold;
+}
+
+.buttonClass1
+{
+	width: 40px;
+	height: 35px;
+	font-size:13px;	
+}
+
+
+input[type="button"]:active {
+	
+	background: rgb(69,109,160);
+	outline:none;
+	-moz-box-shadow:0px 0px 0px #AAA;
+	-webkit-box-shadow:0px 0px 0px #AAA;
+	box-shadow:0px 0px 0px #AAA;
+	
+}
+
+
+.container
+{
+	text-align:right;
+  
+    vertical-align: bottom;
+    margin-bottom: 0px;
+    padding: 10px;
+    -moz-box-shadow: inset 2px 2px 2px #888;
+    -webkit-box-shadow: inset 2px 2px 2px #888;
+    box-shadow: inset 2px 2px 2px #888;
+ 
+    background-color: #fff;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#888888', Direction=-35, Strength=2);
+}
+
+.textBox1
+{
+    height:30px;
+    text-align:right;
+    border: none;
+   /* background: #234521; */
+    margin: 0px 0px 0px 0px;
+	font-size:16px;
+	font-weight:bold;   
+}
+
+.textBox2
+{
+    height:30px;
+    text-align:right;
+    border: none;
+   /* background: #234521; */
+    padding: 0px 0px 0px 0px;
+	width: 30px;
+	font-size:20px;
+}
+.textBox3
+{
+	height:25px;
+	text-align:right;
+	border:none;
+	padding: 0px 0px 0px 0px;
+	font-size:12px;
+	margin: 0px;
+}

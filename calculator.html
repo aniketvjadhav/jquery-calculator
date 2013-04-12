@@ -1,0 +1,145 @@
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<link rel="stylesheet" href="calculator.css" type="text/css"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="keyboardJQuery.js"></script>
+<script type="text/javascript" src="calculate.js"></script>
+
+</head>
+
+<body>
+
+<form name="calc" id="calc">
+<table border="4" align="center" bordercolor="#4e7fb6" style="background: #EEEEEE;">
+
+
+  <tr height="90px" valign="bottom">
+    <td colspan="2" class="table" align="center" style="padding:10px;">
+      <div class="container">
+      
+
+		<input id="disp2" name="disp2" type="text" value="" class="textBox3"  size="45" readonly="readonly" /><br>
+        <input id="disp1" name="disp1" type="text" value="" class="textBox1"  size="30" readonly="readonly" /><br>
+        <input id="opdisp" name="opdisp" type="text" value="" class="textBox2"  size="1" readonly="readonly" />
+        <input id="disp" name="disp" type="text" value="0" class="textBox1"  size="27" readonly="readonly" />
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="200" valign="top" style="padding:10px; width:120px;">
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr style="display:none">
+        <td><input class="buttonClass1" type="button" name="degree" value="Deg" onClick="inverse()"></td>
+        <td><input class="buttonClass1" type="button" name="left" value="(" onClick="addDigit('(')"></td>
+        <td><input class="buttonClass1" type="button" name="right" value=")" onClick="addDigit(')')"></td>
+      </tr>
+      <tr>
+        <td><input class="buttonClass1" type="button" name="exp" value="x^y" onClick="operate('^')"></td>
+        <td><input class="buttonClass1" type="button" name="square" value="x^2" onClick="operate('square')"></td>
+        <td><input class="buttonClass1" type="button" name="cube" value="x^3" onClick="operate('cube')"></td>
+      </tr>
+
+      <tr>
+        <td><input class="buttonClass1" type="button" name="inverse" value="Inv" onClick="inverse()"></td>
+
+        <td><input class="buttonClass1" type="button" name="sinh" value="sinh" onClick="operate('sinh')"></td>
+
+        <td><input class="buttonClass1" type="button" name="sin" value="sin" onClick="operate('sin')"></td>      
+      </tr>
+
+      <tr>
+        <td><input class="buttonClass1" type="button" name="sqrt" value="√" onClick="operate('sqrt')"></td>
+
+        <td><input class="buttonClass1" type="button" name="cosh" value="cosh" onClick="operate('cosh')"></td>
+
+        <td><input class="buttonClass1" type="button" name="cos" value="cos" onClick="operate('cos')"></td>
+      
+      </tr>
+
+      <tr>
+        <td><input class="buttonClass1" type="button" name="log" value="log" onClick="operate('log')"></td>
+        <td>
+          <input class="buttonClass1" type="button" name="tanh" value="tanh" onClick="operate('tanh')"> 
+        </td>
+        <td><input class="buttonClass1" type="button" name="tan" value="tan" onClick="operate('tan')"></td>
+      </tr>
+  
+  </table></td>
+  <td valign="top" style="padding:10px; width:200px;">	
+  
+  <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><input class="buttonClass" type="button" name="c" value="C" onClick="Clear()"></td>
+        <td colspan="2"><input class="buttonClass" style="width: 82px;"  type="button" name="ac" value="A/C" onClick="allclear()"></td>
+        <td>&nbsp;</td>
+        <td colspan="2"><input class="buttonClass" type="button" style="width: 82px;"  name="back2" value="←" onClick="removeDigit()"></td>
+        </tr>
+      <tr>
+        <td>
+         <input class="buttonClass" type="button" name="seven" value="7" onClick="addDigit('7')">
+        </td>
+        <td>
+         <input class="buttonClass" type="button" name="eight" value="8" onClick="addDigit('8')">
+        </td>
+        <td>
+         <input class="buttonClass" type="button" name="nine" value="9" onClick="addDigit('9')">
+        </td>
+        <td width="20">&nbsp;</td>
+        <td><input class="buttonClass" type="button" name="divide" value="÷" onClick="operate('/')"></td>
+        <td><input class="buttonClass" type="button" name="fact" value="n!" onClick="operate('fact')"></td>
+      </tr>
+
+      <tr>
+        <td>
+        <input class="buttonClass" type="button" name="four" value="4" onClick="addDigit('4')">
+        </td>
+
+        <td>
+        <input class="buttonClass" type="button" name="five" value="5" onClick="addDigit('5')">
+        </td>
+
+        <td>
+        <input class="buttonClass" type="button" name="six" value="6" onClick="addDigit('6')">
+        </td>
+        <td>&nbsp;</td>
+        <td><input class="buttonClass" type="button" name="mult" value="×" onClick="operate('*')"></td>
+        <td><input class="buttonClass" type="button" name="exponent" value="e" onClick="operate('E')"></td>      
+      </tr>
+
+      <tr>
+        <td><input class="buttonClass" type="button" name="one" value="1" onClick="addDigit('1')">
+        
+        </td>
+
+        <td>
+        <input class="buttonClass" type="button" name="two" value="2" onClick="addDigit('2')">
+        </td>
+
+        <td>
+        <input class="buttonClass" type="button" name="three" value="3" onClick="addDigit('3')"> 
+        </td>
+        <td>&nbsp;</td>
+        <td><input class="buttonClass" type="button" name="sub" value="-" onClick="operate('-')"></td>
+        <td rowspan="2"><input class="buttonClass" style="height: 72px;" type="button" name="equal" value="=" onClick="calculate(0)"></td>
+        </tr>
+
+      <tr>
+        <td colspan="2"><input class="buttonClass" style="width: 82px;" type="button" name="zero" value="0" onClick="addDigit('0')"></td>
+        <td><input class="buttonClass" type="button" name="dot" value="." onClick="checkDot()"></td>
+        <td>&nbsp;</td>
+        <td><input class="buttonClass" type="button" name="add" value="+" onClick="operate('+')"></td>
+        </tr>
+  
+  </table>
+
+  </td>  
+  
+  
+  </tr>
+</table>
+</form>
+
+</body>
+</html>
